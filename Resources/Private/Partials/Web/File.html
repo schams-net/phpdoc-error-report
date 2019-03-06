@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center" id="heading{file.id}">
+    <h2 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{file.id}" aria-expanded="true" aria-controls="collapse{file.id}">
+        {file.filename}
+      </button>
+    </h2>
+    <span class="badge badge-danger badge-pill">{file.error_count}</span>
+  </div>
+
+  <div id="collapse{file.id}" class="collapse" aria-labelledby="heading{file.id}" data-parent="#accordion">
+    <div class="card-body">
+
+        <f:for each="{file.classes}" as="class">
+            <p>Class: <code>{class.fullname}</code></p>
+        </f:for>
+
+        <table>
+            <f:for each="{file.errors}" as="error">
+                <f:render partial="TableRow" arguments="{error: error}" />
+            </f:for>
+        </table>
+
+    </div>
+  </div>
+</div>

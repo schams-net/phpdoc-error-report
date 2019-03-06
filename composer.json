@@ -1,0 +1,13 @@
+{
+	"name": "schams-net/phpdoc-error-report",
+	"description": "PHPdoc Error Report",
+	"require": {
+		"typo3fluid/fluid": "*",
+		"phpdocumentor/phpdocumentor": "^2.9"
+	},
+	"autoload": {
+		"psr-4": {
+			"SchamsNet\\DocErrorReport\\": "Classes"
+		}
+	}
+}

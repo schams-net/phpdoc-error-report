@@ -1,0 +1,15 @@
+<f:layout name="Default" />
+<f:section name="Main">
+
+<div class="d-flex justify-content-between">
+    <div class=""><p><strong>PHP DocBlocks Report</strong></p></div>
+    <div class=""><p>Total errors: {totalErrorCount}</p></div>
+</div>
+
+<div class="accordion" id="accordion">
+    <f:for each="{data}" as="file">
+        <f:render partial="File" arguments="{file: file}" />
+    </f:for>
+</div>
+
+</f:section>
